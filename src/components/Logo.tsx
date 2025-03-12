@@ -1,13 +1,15 @@
+import { Link } from 'react-router-dom';
+
 function Logo() {
   return (
-    <a className="navbar-brand" href="#">
+    <Link className="navbar-brand" to="/">
       <img
         src="../../public/images/Logo.png"
         alt="Logo"
         width={48}
         height={48}
       />
-    </a>
+    </Link>
   );
 }
 

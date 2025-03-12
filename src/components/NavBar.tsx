@@ -1,5 +1,6 @@
 import { FaBars } from 'react-icons/fa';
 import Logo from './Logo';
+import { NavLink } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -25,33 +26,33 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
+              <NavLink className="nav-link" aria-current="page" to="/">
+                Dashboard
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
+              <NavLink className="nav-link" to="/new">
+                New Expense
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
+              <NavLink className="nav-link" to="/reports">
+                Reports
+              </NavLink>
             </li>
           </ul>
 
           {/* Login/Logout buttons */}
           <div className="d-flex" role="search">
-            <button className="btn btn-sm btn-outline-light">Login</button>
-            <button className="btn btn-sm btn-outline-light mx-1">
-              Logout
-            </button>
+            <NavLink className="btn btn-sm btn-outline-light" to="/login">
+              Login
+            </NavLink>
+            <NavLink
+              className="btn btn-sm btn-outline-light mx-1"
+              to="/register"
+            >
+              Register
+            </NavLink>
           </div>
         </div>
       </div>
